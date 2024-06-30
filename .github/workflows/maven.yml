@@ -41,8 +41,7 @@ jobs:
     - name: Run testing project
       working-directory: ./testing-project
       run: mvn clean verify --file pom.xml
-    - name: Generate tests report
-      uses: mt185252/cucumber-html-report-generator@v1
+    - name: Deploy tests report
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        json-file-path: ./testing-project/target/cucumber/report.json
-          
+        folder: testing-project/target/cucumber-report
