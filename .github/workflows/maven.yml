@@ -34,7 +34,10 @@ jobs:
       working-directory: ./normal-project
       run: docker build -t binark/normal-project:latest .
     - name: Run normal project Docker image
-      run: docker run -p 8080:8080 -t binark/normal-project:latest
+      run: docker run -d -p 8080:8080 -t binark/normal-project:latest
+    - name: Sleep for 15 seconds
+      run: sleep 15s
+      shell: bash
     - name: Run testing project
       working-directory: ./testing-project
       run: mvn clean verify --file pom.xml
