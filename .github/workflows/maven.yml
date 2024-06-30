@@ -32,9 +32,9 @@ jobs:
       uses: crazy-max/ghaction-setup-docker@v3.3.0
     - name: Build normal project docker image
       working-directory: ./normal-project
-      run: ./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=binark/normal-project
+      run: docker build -t binark/normal-project:latest .
     - name: Run normal project Docker image
-      run: docker run -p 8080:8080 -t docker.io/binark/normal-project:latest
+      run: docker run -p 8080:8080 -t binark/normal-project:latest
     - name: Run testing project
       working-directory: ./testing-project
       run: mvn clean verify --file pom.xml
