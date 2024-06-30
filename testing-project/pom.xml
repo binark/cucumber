@@ -4,7 +4,7 @@
   <groupId>org.binark</groupId>
   <artifactId>testing-project</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Archetype - testing-project</name>
+  <name>testing-project</name>
   <url>http://maven.apache.org</url>
 
 

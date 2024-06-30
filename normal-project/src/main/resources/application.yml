@@ -5,3 +5,7 @@ spring:
 server:
   servlet:
     context-path: /api
+
+spring-boot:
+  build-image:
+    imageName: binark/normal-project
